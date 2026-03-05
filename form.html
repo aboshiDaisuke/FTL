@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>株式会社 未来技術研究所 | お問合わせ</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="ここにサイト説明を入れます" name="description" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+  </header>
+  <div id="container">
+    <div id="contents">
+      <main>
+        <section>
+          <div class="titleset3-bg-parts">
+            <h3>お問合せはこちら</h3>
+          </div>
+          <section>
+            <form action="contact_send.php" method="POST">
+              <table class="ta1-parts">
+                <tr>
+                  <th>お問合せ種別（複数可）</th>
+                  <td>
+                    <label><input name="category[]" type="checkbox" value="業務関連" /> 業務関連</label><br />
+                    <label><input name="category[]" type="checkbox" value="採用関連" /> 採用関連</label><br />
+                    <label><input name="category[]" type="checkbox" value="セミナー視聴希望" />
+                      セミナー視聴希望</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>お名前（必須）</th>
+                  <td><input name="name" required="" type="text" /></td>
+                </tr>
+                <tr>
+                  <th>電話番号</th>
+                  <td><input name="phone" type="tel" /></td>
+                </tr>
+                <tr>
+                  <th>メールアドレス（必須）</th>
+                  <td><input name="email" required="" type="email" /></td>
+                </tr>
+                <tr>
+                  <th>メールアドレス（確認用）</th>
+                  <td><input type="email" name="email_confirm" required></td>
+                </tr>
+
+                <tr>
+                  <th>お問合せ内容（必須）</th>
+                  <td><textarea name="message" required="" rows="10"></textarea></td>
+                </tr>
+              </table>
+              <p class="center-image" style="margin: 1.5em 0;">
+                <button type="submit">送信する</button>
+              </p>
+            </form>
+          </section>
+        </section>
+      </main>
+    </div>
+    <!--/#contents-->
+    <ul id="footermenu1-parts">
+      <li><a href="policy.html">プライバシー・サイトポリシー</a></li>
+      <li><a href="ism.html">情報セキュリティ基本方針</a></li>
+    </ul>
+    <footer>
+      <small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+    </footer>
+  </div>
+  <!--/#container-->
+  <!--開閉メニュー-->
+  <div id="menubar">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="company.html">会社案内</a></li>
+        <li><a href="business.html">事業紹介</a></li>
+        <li><a href="products.html">製品・サービス</a>
+          <ul>
+            <li><a href="products.html#kouhou">デジタル広報支援サービス</a></li>
+            <li><a href="products.html#srs">システムリノベーションサービス</a></li>
+            <li><a href="products.html#syounin">電子承認システム</a></li>
+            <li><a href="products.html#keihi">DXケッサイプラスワン</a></li>
+            <li><a href="products.html#gyoumu">業務管理システム</a></li>
+          </ul>
+        </li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="form.html">お問合せ</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <!--/#menubar（開閉メニュー）-->
+  <!--ページの上部へ戻るボタン-->
+  <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+  <!--開閉ボタン（ハンバーガーアイコン）-->
+  <div id="menubar_hdr">
+    <span></span><span></span><span></span>
+  </div>
+  <!--jQueryの読み込み-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--パララックス（inview）-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+  <!--このテンプレート専用のスクリプト-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

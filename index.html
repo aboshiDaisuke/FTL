@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>株式会社 未来技術研究所 | トップページ</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="小さな会社の大きな仕事。株式会社未来技術研究所は、ICTの力で行政・社会を支え、社員一人ひとりが輝ける職場を目指しています。" name="description" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* トップページ用 チャレンジテクノロジースリムバナー */
+    .cyber-banner {
+      display: block;
+      background: radial-gradient(circle at right center, #0a1930 0%, #020611 100%);
+      border-left: 4px solid #00f3ff;
+      padding: 2rem 5rem 2rem 2.5rem;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 2rem;
+    }
+
+    .cyber-banner:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 243, 255, 0.15);
+    }
+
+    .cyber-banner::after {
+      content: '\f138';
+      /* FontAwesome right arrow */
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 2.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #00f3ff;
+      opacity: 0.5;
+      transition: opacity 0.3s, right 0.3s;
+    }
+
+    .cyber-banner:hover::after {
+      opacity: 1;
+      right: 2rem;
+    }
+
+    .cyber-banner-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: #00f3ff;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .cyber-banner-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    .cyber-banner-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.9rem;
+      color: #8bb4cc;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    @media screen and (max-width: 600px) {
+      .cyber-banner {
+        padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+      }
+
+      .cyber-banner-title {
+        font-size: 1.2rem;
+      }
+
+      .cyber-banner::after {
+        font-size: 1.5rem;
+        right: 1.2rem;
+      }
+
+      .cyber-banner:hover::after {
+        right: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="logo"><a href="index.html"><img alt="未来技術研究所" src="images/ftl_logo.png" /></a></h1>
+  </header>
+  <div id="container">
+    <!--スライドショー-->
+    <aside id="mainimg-parts">
+      <div class="slide-parts slide1-parts"></div>
+      <div class="slide-parts slide2-parts"></div>
+      <div class="slide-parts slide3-parts"></div>
+    </aside>
+    <div class="scroll-container-parts">
+      <p>SCROLL</p>
+      <div class="scroll-line-parts"><span></span></div>
+    </div>
+    <div id="contents">
+      <main>
+
+        <div class="hero-section">
+          <p class="hero-title">
+            創るのは、未来のあたりまえ。<br>
+            実装するのは、確かな技術。
+          </p>
+          <p>小さな会社の大きなオシゴトをご紹介します！</p>
+        </div>
+
+        <section>
+          <div class="list-c2-parts">
+            <a href="business.html">
+              <div class="list-parts image1-parts">
+                <div class="text-parts">
+                  <h4><span class="sub-text-parts">Business</span><span class="main-text-parts">事業紹介</span></h4>
+                  <p>システムの設計、導入、運用までをトータルでサポートいたします。</p>
+                </div>
+              </div>
+            </a>
+            <a href="products.html">
+              <div class="list-parts image2-parts">
+                <div class="text-parts">
+                  <h4><span class="sub-text-parts">Product</span><span class="main-text-parts">製品・サービス</span></h4>
+                  <p>お客様の課題を形にします。</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--/.list-c2-parts-->
+        </section>
+
+
+        <section>
+
+
+
+
+          <div class="parts-list-normal2 image2-parts">
+
+            <div class="text-parts reverse-parts">
+
+              <h3><span class="large-parts company-title">会社を知る</span></h3>
+
+
+              <p>1977年創業以来、ICT技術で多様な実績と信頼を築いてきました。<br>
+                これからも挑戦を続け、日本らしい繊細さと真心を大切に、
+                未来の価値創造に貢献してまいります。</p>
+              <p class="btn-parts"><a href="company.html">View More</a></p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <div class="center-image"><img src="images/point.png" alt=""></div>
+
+
+        <section>
+
+
+          <div class="list-grid1-parts">
+
+
+            <div class="list-parts">
+              <figure><img src="images/sample_1.jpg" alt=""></figure>
+              <div class="text-parts">
+                <h4>国の行政と、未来をつなぐ仕事。</h4>
+                <p>私たちは、官公庁と直接やりとりを行いながら、政策や制度の運用をサポートし、国の行政の円滑な運営と、その先にある未来社会の実現に貢献しています。</p>
+              </div>
+              <span class="icon-bg1-parts">Point1</span>
+            </div>
+
+            <div class="list-parts">
+              <figure><img src="images/car.jpg" alt=""></figure>
+              <div class="text-parts">
+                <h4>名古屋・東京から、世界に誇る技術を支える。</h4>
+                <p>私たちは名古屋に本社を構え、日本を代表する大手企業のシステム開発・技術支援を通じて、産業と社会の進化を支えています。</p>
+              </div>
+              <span class="icon-bg1-parts">Point2</span>
+            </div>
+
+            <div class="list-parts">
+              <figure><img src="images/top_image1.jpg" alt=""></figure>
+              <div class="text-parts">
+                <h4>人生のゴールデンタイムを、思いっきり楽しもう！</h4>
+                <p>仕事もプライベートも本気で楽しむ。それが私たちのスタイルです。成長できる環境と、気の合う仲間たち。あなたの今を、一番輝く時間にしませんか？</p>
+              </div>
+              <span class="icon-bg1-parts">Point3</span>
+            </div>
+
+
+
+            <div class="list-parts">
+              <figure>
+                <a href="https://www.w3.org/" target="_blank">
+                  <img src="images/w3c.png" alt="W3Cのロゴ">
+                </a>
+              </figure>
+              <div class="text-parts">
+                <h4>小さな会社でも、世界標準へ。</h4>
+                <p>私たちは小規模な開発チームですが、Webの未来をつくる国際標準化団体「W3C（World Wide Web Consortium）」に加盟しています。</p>
+              </div>
+              <span class="icon-bg1-parts">Point4</span>
+            </div>
+
+            <div class="list-parts">
+              <figure>
+                <a href="https://www.wroj.org/" target="_blank">
+                  <img src="images/wro.jpg" alt="WRO Japanの活動風景">
+                </a>
+              </figure>
+              <div class="text-parts">
+                <h4>WRO Japanを応援しています！</h4>
+                <p>未来を創る子どもたちの挑戦を、私たちは全力でサポートします。ロボットを通じた学びと成長の場を、もっと楽しく、もっと広げていきたい。それが私たちの願いです。</p>
+              </div>
+              <span class="icon-bg1-parts">Point5</span>
+            </div>
+
+            <div class="list-parts">
+              <figure><a href="https://lit.link/ftlsns" target="_blank"><img src="images/ceosns.jpg" alt=""></a>
+              </figure>
+              <div class="text-parts">
+                <h4>社長は、ちょっとユニークな“多才人”。</h4>
+                <p>
+                  経営者でありながら大学教授、アスリート、そしてYouTuberという多彩な顔を持つ社長。知識と行動力にあふれ、社員との距離も近い存在です。新入社員とも気さくに会話し、職場に活気と刺激をもたらしてくれます。
+                </p>
+              </div>
+              <span class="icon-bg1-parts">Point6</span>
+            </div>
+
+          </div>
+
+    </div>
+    <!--/.list-grid-parts-->
+
+    </section>
+
+
+
+    <div class="center-image"><img src="images/point2.png" alt=""></div>
+
+    <section class="company-stats">
+      <h2>＼未来技術研究所ってこんな会社／</h2>
+      <ul class="stats-list">
+        <li>
+          <p class="stat-title">設立</p>
+          <p class="stat-value"><span class="highlight">1977年</span><br>6月15日</p>
+        </li>
+        <li>
+          <p class="stat-title">従業員数</p>
+          <p class="stat-value"><span class="highlight">64名</span><br>（グループ全体）</p>
+        </li>
+        <li>
+          <p class="stat-title">平均年齢</p>
+          <p class="stat-value"><span class="highlight">39歳</span></p>
+        </li>
+
+        <li>
+          <p class="stat-title">残業時間</p>
+          <p class="stat-value">平均<span class="highlight">11.2時間</span>/月</p>
+        </li>
+
+        <li>
+          <p class="stat-title">勤務時間</p>
+          <p class="stat-value">フレックスタイム制<br>（コアタイム: 10:30 - 14:00）</p>
+        </li>
+        <li>
+          <p class="stat-title">休日</p>
+          <p class="stat-value">完全週休2日制<br>夏期休暇<br>年末年始休暇<br>特別休暇</p>
+        </li>
+        <li>
+          <p class="stat-title">福利厚生</p>
+          <p class="stat-value">社会保険完備<br>健康診断<br>育児・介護休業制度</p>
+        </li>
+      </ul>
+    </section>
+
+    <div class="center-image"><img src="images/point4.png" alt=""></div>
+
+    <section>
+      <div class="list-grid1-parts">
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">働き方は自分で決める</h3>
+            <p>仕事にあわせて就業時間を自分で管理しましょう。<br>
+              朝夕のラッシュによる疲労やその日の体調を考えて就業時間を調整しましょう。<br>
+              休暇や余暇を有効に活かし、リフレッシュしましょう。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">夏休みだって</h3>
+            <p>7～9月の間に連続3日間とれます。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">特別休暇</h3>
+            <p>結婚、出産、忌引き、特別身体障害者休暇※があります。<br>
+              ※身障者の方の通院や検査のための休暇です。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">社員だから、特典！</h3>
+            <p>保養施設：エクシブClub、リゾートホテル エクシブ蓼科、山中湖、軽井沢、琵琶湖、等</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">健康は何より大切</h3>
+            <p>定期健康診断：毎年1回。30歳以上は成人病検診が受けられます。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">育児休業、介護休業もとりやすい！</h3>
+            <p>出産休暇やパパの育児休業は10年以上前から実績があります。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">悩みは困りごと相談室へ</h3>
+            <p>職制を通さずに相談できる窓口「困りごと相談室」(秘密厳守)を設置しています。</p>
+          </div>
+        </div>
+
+        <div class="list-parts">
+          <div class="text-parts">
+            <h3 class="titleset1-parts">人材派遣は行いません！</h3>
+            <p>私たちは技術者のキャリアを大切にしています。プロジェクトに腰を据えて取り組み、じっくり成長できる環境を提供しています。</p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <div class="center-image"><img src="images/point5.png" alt=""></div>
+
+    <section class="company-stats">
+      <ul class="stats-list">
+        <li>
+          <p class="stat-title">フレックスタイム制</p>
+          <p class="stat-value">コアタイム<span class="highlight">10:30～14:00</span></p>
+        </li>
+        <li>
+          <p class="stat-title">残業はなし？</p>
+          <p class="stat-value">スケジュールの管理は自分でします</p>
+        </li>
+        <li>
+          <p class="stat-title">半休制度</p>
+          <p class="stat-value">病院・役所・旅行などへも柔軟に対応</p>
+        </li>
+        <li>
+          <p class="stat-title">有給休暇</p>
+          <p class="stat-value">エンリョはきんもつ！初年度は<span class="highlight">10日</span></p>
+        </li>
+        <li>
+          <p class="stat-title">病気休暇</p>
+          <p class="stat-value">最高<span class="highlight">6ヶ月</span>まで保証</p>
+        </li>
+        <li>
+          <p class="stat-title">生理休暇</p>
+          <p class="stat-value">つらいときは、ガマンしません</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="titleset2-parts section-title-blue"><span class="uline">■未来技術研究所を覗いてみて！(YouTubeチャンネル)</span></h2>
+
+
+      <div class="list-yoko-scroll-parts">
+        <div class="list-parts">
+          <div class="video-container">
+            <iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"
+              src="https://www.youtube.com/embed/PxRfSUx40fM?autoplay=1&amp;mute=1" title="YouTube video player">
+            </iframe>
+          </div>
+          <h4>【公式】未来技術研究所</h4>
+          <p class="text-parts">会社情報や取り組みなどを発信しています。</p>
+        </div>
+        <div class="list-parts">
+          <figure><img alt="" src="images/comingsoon.jpg" /></figure>
+          <h4><a href="https://www.youtube.com/channel/UC8iBCq5IesX4BrrmrMnGVlw" target="_blank">FTL広報チャンネル</a></h4>
+          <p class="text-parts">会社周辺の飲食店情報などを発信しています。</p>
+        </div>
+
+        <!--/.list-yoko-scroll-parts-->
+      </div>
+    </section>
+
+    <section>
+      <a href="challenge.html" class="cyber-banner">
+        <span class="cyber-banner-sub">CHALLENGE TECHNOLOGY</span>
+        <h3 class="cyber-banner-title">チャレンジテクノロジー 特設ページ</h3>
+        <p class="cyber-banner-text">限界なき挑戦が、新しい価値を生み出す。エンジニアの探求の軌跡や検証動画はこちら。</p>
+      </a>
+    </section>
+
+
+
+
+    <section>
+
+      <div class="text-parts">
+        <dl class="news4-parts">
+          <dt>2026/02/27<span>お知らせ</span></dt>
+          <dd>チャレンジテクノロジー企画を追加しました。</dd>
+          <dt>2025/06/15<span>お知らせ</span></dt>
+          <dd>ホームページリニューアル。</dd>
+          <dt>2024/04/01<span class="icon-bg2-parts">サービス</span></dt>
+          <dd>ウェブページ制作サービス始めました。</dd>
+          <dt>2024/02/02<span class="icon-bg1-parts">イベント</span></dt>
+          <dd>第3回ITデジタル就職展に参加します。</dd>
+          <dt>
+            <p><a href="news_updated.html">過去のニュースはこちら。</a></p>
+          </dt>
+        </dl>
+      </div>
+  </div>
+  <!--/.news2-parts-c2-->
+  </section>
+
+
+
+
+  <section>
+    <div class="list-grid5-parts grid-container-wide"
+      style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+
+      <div class="list-parts" style="width: 100%; max-width: 350px;">
+        <figure><a href="ai/index.html" target="_blank"><img src="images/banner.jpg" alt=""></a></figure>
+        <div class="text-parts">
+          <h4>FTL AI</h4>
+          <p>【特設ページ】当社のAI応用実績と展望をご紹介します</p>
+        </div>
+      </div>
+
+      <div class="list-parts" style="width: 100%; max-width: 350px;">
+        <figure><a href="download/index.html" target="_blank"><img src="images/calendar.jpg" alt=""></a></figure>
+        <div class="text-parts">
+          <h4>壁紙ダウンロード</h4>
+          <p>季節の壁紙をダウンロードいただけます</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+  </div>
+  <section id="popup3-parts">
+    <h2>エントリー受付中</h2>
+    <p>未来技術研究所は一緒に働く仲間を通年採用しています。<br />
+      弊社にご興味がございましたらお気軽に会社見学へお越しください！社長自ら、ご説明させていただきます。
+      <br><a href="entrysheet.html">▶️応募フォーム</a>
+    </p>
+    <span class="close-btn-parts"><i class="fa-solid fa-xmark"></i></span>
+  </section>
+  <!--/#contents-->
+  <ul id="footermenu1-parts">
+    <li><a href="policy.html">プライバシー・サイトポリシー</a></li>
+    <li><a href="ism.html">情報セキュリティ基本方針</a></li>
+  </ul>
+  <footer>
+    <small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+  </footer>
+  </div>
+  <!--/#container-->
+  <!--開閉メニュー-->
+  <div id="menubar">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="company.html">会社案内</a></li>
+        <li><a href="business.html">事業紹介</a></li>
+        <li><a href="products.html">製品・サービス</a>
+          <ul>
+            <li><a href="products.html#kouhou">デジタル広報支援サービス</a></li>
+            <li><a href="products.html#srs">システムリノベーションサービス</a></li>
+            <li><a href="products.html#syounin">電子承認システム</a></li>
+            <li><a href="products.html#keihi">DXケッサイプラスワン</a></li>
+            <li><a href="products.html#gyoumu">業務管理システム</a></li>
+          </ul>
+        </li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="form.html">お問合せ</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <!--/#menubar（開閉メニュー）-->
+  <!--ページの上部へ戻るボタン-->
+  <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+  <!--開閉ボタン（ハンバーガーアイコン）-->
+  <div id="menubar_hdr">
+    <span></span><span></span><span></span>
+  </div>
+  <!--jQueryの読み込み-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--パララックス（inview）-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+  <!--このテンプレート専用のスクリプト-->
+  <script src="js/main.js"></script>
+  <!--License20250328uNtQs-->
+</body>
+
+</html>

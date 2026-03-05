@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<title>株式会社 未来技術研究所 | 会社案内</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="『ものづくり』から『価値創り』へ。未来技術研究所は、ICTと創造力で社会に貢献する技術集団。システム開発、研究支援、新商品開発で、お客様の“期待を超える”を目指しています。"
+		name="description" />
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="container">
+		<div id="contents">
+			<main>
+				<section>
+					<div class="hero-section">
+						<p class="hero-title">
+							『ものづくり』から『価値創り』へ<br>未来を支える技術で、お客様の"期待を超える"
+						</p>
+					</div>
+
+
+					<section>
+						<div class="keiei-rinen">
+							<h2>経営理念</h2>
+							“未来を支える技術”で、お客様の“期待を超える”ことが私たちの使命です。<br />
+							私たち社員一人ひとりは“創造力”と“人間力”で“日々の成長を積み重ね”<br />
+							常に“夢”を追い続ける“モチベーションカンパニー”を目指します。<br /><br />
+							<img alt="" src="images/ceo_photo_2.jpg" /><br /><br />
+
+							当社は１９７７年の創業以来、コンピュータ関連技術を駆使して、<br />
+							多種多様な開発実績を積み上げ、お客様との信頼関係を築いて参りました。<br />
+
+							これまでに培った経験や技術にとらわれず、近年のICT分野の<br />
+							急速な発展と共に時代をリードできるよう挑戦し続けます。<br />
+
+							これからも日本人の気質である繊細さと真心を大切に社員一丸となって、<br />
+							より豊かな未来の価値創りに貢献して参ります。<br /><br />
+							<div class="shacho-mei">＜代表取締役社長　若杉 聡吾＞</div>
+						</div>
+
+
+						<p class="c"><a href="history.html" class="btn1-parts block">沿革を見る(1977年6月〜)<i
+									class="fas fa-arrow-circle-right"></i></a></p>
+
+					</section>
+
+
+					<div class="center-image"><img src="images/company_1.png" alt="" width="60%"></div>
+
+
+					<dl>
+						<dl>
+
+							<dt class="openclose2-parts">どんな人と一緒に仕事ができるの？</dt>
+							<dd>
+								先端技術で、お客様と対等に議論できる本物のエンジニアと一緒に仕事ができます。<br>
+								すごい人が隣にいるのが当たり前でとても励みになります。
+							</dd>
+
+							<dt class="openclose2-parts">私は将来どんな人になれますか？</dt>
+							<dd>
+								社内外の専門家との仕事を通じて高い目標意識を持てます。<br>
+								その道のプロフェッショナルになるのも夢じゃない！
+							</dd>
+
+							<dt class="openclose2-parts">企画とか提案はできますか？</dt>
+							<dd>
+								自分の興味があることや、流行りのことなど、社内プロジェクトを立ち上げたり、<br>
+								お客様へプレゼンして一緒に作り上げていくことができます。<br>
+								FTLではやりたいことが仕事になる！
+							</dd>
+
+							<dt class="openclose2-parts">ライフワークバランスはどうなんだろう？</dt>
+							<dd>
+								自分のライフスタイル、ライフステージに合わせて在宅ワークや半休制度、<br>
+								育児・介護休暇などが利用できます。<br>
+								成果に繋がれば、場所や時間にこだわらず、フレキシブルに働くこともできます。
+							</dd>
+
+							<div class="center-image"><img src="images/company_2.png" alt="" width="60%"></div>
+
+							<dt class="openclose2-parts">名古屋本社ってどんなところ？</dt>
+							<dd>
+								名古屋本社の1階はちょっぴりレトロで重厚なホテルのよう。<br>
+								まるで美術館のように各階には絵画が飾られ、大きなステンドグラスも自慢です。<br>
+								さらには名駅、栄にも近く終業後はどこへでも行けます。
+							</dd>
+
+							<dt class="openclose2-parts">東京支店はどんなところ？</dt>
+							<dd>
+								東京支店は五反田駅のエキチカで、新幹線や羽田空港も近く移動に便利。<br>
+								五反田は日本のシリコンバレーと呼ばれていて、とても活気づいています。<br>
+								また、お昼や夜の食事処もたくさんあります。
+							</dd>
+
+						</dl>
+
+
+					</dl>
+
+					<section>
+						<table class="ta1-parts">
+							<tr>
+								<th>名称</th>
+								<td>株式会社未来技術研究所 (Future technology laboratories INC.)=略してFTL！</td>
+							</tr>
+							<tr>
+								<th>設立</th>
+								<td>1977年6月15日</td>
+							</tr>
+							<tr>
+								<th>資本金</th>
+								<td>6,700万円</td>
+							</tr>
+							<tr>
+								<th>年商</th>
+								<td>4.03 億円(2025年4月)</td>
+							</tr>
+							<tr>
+								<th>従業員数</th>
+								<td>60 名(グループ)</td>
+							</tr>
+							<tr>
+								<th>平均年齢</th>
+								<td>39 歳</td>
+							</tr>
+							<tr>
+								<th>事業内容</th>
+								<td>システムコンサルティング、ソフトウェア/ハードウェア開発、システムリノベーションサービス、研究支援、新商品開発支援</td>
+							</tr>
+							<tr>
+								<th>役員</th>
+								<td>代表取締役　社長 若杉 聡吾<br />
+									取締役　土方 文夫<br />
+									取締役　小関 勝<br />
+									監査役　阪井 義孝(公認会計士)</td>
+							</tr>
+							<tr>
+								<th>顧問</th>
+								<td>一色 正男(神奈川工科大学教授)</td>
+							</tr>
+							<tr>
+								<th>決算期</th>
+								<td>4 月</td>
+							</tr>
+							<tr>
+								<th>取引銀行</th>
+								<td>三菱UFJ銀行、名古屋銀行他</td>
+							</tr>
+							<tr>
+								<th>関連会社</th>
+								<td>株式会社エフティエルインターナショナル</td>
+							</tr>
+							<tr>
+								<th>所属団体</th>
+								<td>社団法人愛知県情報サービス産業健康保険組合、W3C</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<div class="list-free">
+							<div class="text order1">
+								<h3>名古屋本社</h3>
+								<p class="mb30">JR中央本線・名古屋市営地下鉄東山線 / 徒歩5分</p>
+								<ul>
+									<li>〒460-0007</li>
+									<li>名古屋市中区新栄三丁目3番2号</li>
+									<li>TEL:(052)238-7511(代)</li>
+								</ul>
+							</div>
+							<div class="w2 order2">
+								<div class="iframe-box">
+									<iframe allowfullscreen="" height="450" loading="lazy"
+										referrerpolicy="no-referrer-when-downgrade"
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4878337555115!2d136.92552253079953!3d35.16939189839521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370e95c9cde09%3A0xd94c2a9d401a0633!2z5pyq5p2l5oqA6KGT56CU56m25omA!5e0!3m2!1sja!2sjp!4v1742523812361!5m2!1sja!2sjp"
+										style="border:0;" width="600"></iframe>
+								</div>
+							</div>
+						</div>
+						<!--/.list-free-->
+						<div class="list-free">
+							<div class="text order1">
+								<h3>東京支店</h3>
+								<p class="mb30">JR山手線・東急池上線・都営浅草線 / 徒歩3分</p>
+								<ul>
+									<li>東京都品川区西五反田一丁目29番1号 コイズミビル5F</li>
+									<li>TEL:(03)3491-0871(代)</li>
+								</ul>
+							</div>
+							<div class="w2 order2">
+								<div class="iframe-box">
+									<iframe allowfullscreen="" height="450" loading="lazy"
+										referrerpolicy="no-referrer-when-downgrade"
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.101033351747!2d139.72025184011667!3d35.62523570448545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188afb2cf7d80d%3A0x94782bc60d4a718d!2z44ix5pyq5p2l5oqA6KGT56CU56m25omA!5e0!3m2!1sja!2sjp!4v1742523770486!5m2!1sja!2sjp"
+										style="border:0;" width="600"></iframe>
+								</div>
+							</div>
+						</div>
+						<!--/.list-free-->
+					</section>
+					<section>
+						<h3>主要取引先</h3>
+						<table class="ta1-parts">
+							<tr>
+								<th>公的機関</th>
+								<td>幾徳学園神奈川工科大学<br />株式会社国際電気通信基礎技術研究所<br />
+									国立研究開発法人宇宙航空研究開発機構<br />国立研究開発法人産業技術総合研究所<br />
+									国立研究開発法人情報通信研究機構<br />国立研究開発法人日本原子力研究開発機構<br />
+									国立研究開発法人理化学研究所<br />大学共同利用機関法人高エネルギー加速器研究機構<br />
+									東京都水道局<br />名古屋大学核融合科学研究所（旧プラズマ研）<br />日本放送協会放送技術研究所</td>
+							</tr>
+							<tr>
+								<th>メーカー</th>
+								<td>株式会社アイシン /
+									株式会社アスカ商会<br />
+									株式会社ウーブン・アルファ /
+									ＮＴＴデータグループ<br />
+									川崎重工業株式会社 /
+									キヤノン株式会社<br />
+									KDDI 株式会社 /
+									社会福祉法人サン・ビジョン<br />
+									株式会社シンテックホズミ /
+									住友林業株式会社<br />
+									セイコーエプソン株式会社 /
+									ソニー株式会社<br />
+									中部電力株式会社 /
+									株式会社デンソー<br />
+									株式会社東海理化 /
+									東芝グループ<br />
+									東京吉岡株式会社 /
+									東邦ガス株式会社<br />
+									トヨタ自動車株式会社 /
+									豊田通商株式会社<br />
+									中埜総合印刷株式会社 /
+									名古屋電機工業株式会社<br />
+									日本ガイシ株式会社 /
+									株式会社日本・精神技術研究所<br />
+									日本IBM株式会社 /
+									株式会社ネクスティエレクトロニクス<br />
+									パイオニア株式会社 /
+									パナソニックITS株式会社<br />
+									日立グループ /
+									株式会社福田屋百貨店<br />
+									富士通テン株式会社 /
+									ブラザー工業株式会社<br />
+									株式会社本田技術研究所 /
+									株式会社松坂屋<br />
+									三菱重工業株式会社 /
+									三菱電機株式会社<br />
+									ヤマハ株式会社 /
+									ヤマハ発動機株式会社…他</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+			</main>
+		</div>
+		<!--/#contents-->
+		<ul id="footermenu1-parts">
+			<li><a href="policy.html">プライバシー・サイトポリシー</a></li>
+			<li><a href="ism.html">情報セキュリティ基本方針</a></li>
+		</ul>
+		<footer>
+			<small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+		</footer>
+	</div>
+	<!--/#container-->
+	<!--開閉メニュー-->
+	<div id="menubar">
+
+		<nav>
+			<ul>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="company.html">会社案内</a></li>
+				<li><a href="business.html">事業紹介</a></li>
+				<li><a href="products.html">製品・サービス</a>
+					<ul>
+						<li><a href="products.html#kouhou">デジタル広報支援サービス</a></li>
+						<li><a href="products.html#srs">システムリノベーションサービス</a></li>
+						<li><a href="products.html#syounin">電子承認システム</a></li>
+						<li><a href="products.html#keihi">DXケッサイプラスワン</a></li>
+						<li><a href="products.html#gyoumu">業務管理システム</a></li>
+						<li><a href="products.html#genzai">製品原材料管理システム</a></li>
+					</ul>
+				</li>
+				<li><a href="recruit.html">採用情報</a></li>
+				<li><a href="form.html">お問合せ</a></li>
+			</ul>
+		</nav>
+
+	</div>
+	<!--/#menubar（開閉メニュー）-->
+	<!--ページの上部へ戻るボタン-->
+	<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+	<!--開閉ボタン（ハンバーガーアイコン）-->
+	<div id="menubar_hdr">
+		<span></span><span></span><span></span>
+	</div>
+	<!--jQueryの読み込み-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!--パララックス（inview）-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+	<!--このテンプレート専用のスクリプト-->
+	<script src="js/main.js"></script>
+	<!--License20250328uNtQs-->
+</body>
+
+</html>

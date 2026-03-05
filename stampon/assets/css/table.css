@@ -1,0 +1,14 @@
+table {
+  border-collapse: collapse;
+  border: solid 2px red;
+  width: 90%;
+}
+table th {
+  border: dashed 1px red;
+  text-align: center;
+  background-color:#ffe4e1;/* mistyrose */
+}
+table td {
+  border: dashed 1px red;
+  padding: 10px;
+}

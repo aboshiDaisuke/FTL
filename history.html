@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<title>会社沿革 | 株式会社 未来技術研究所</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="株式会社未来技術研究所の会社沿革ページです。1977年の創業から現在に至るまでの歩みをご紹介します。" name="description" />
+	<link href="css/style.css" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+		rel="stylesheet" />
+	<style>
+		/* ===== 沿革ページ専用スタイル ===== */
+
+		/* ページ全体の背景 */
+		body {
+			background: #f4f6f9;
+		}
+
+		/* ヘッダーバナー */
+		.history-hero {
+			background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+			padding: 5rem 2rem 4rem;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.history-hero::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		}
+
+		.history-hero-label {
+			font-family: 'Inter', sans-serif;
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 0.4em;
+			color: rgba(100, 200, 255, 0.8);
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			position: relative;
+		}
+
+		.history-hero h1 {
+			font-family: 'Noto Sans JP', sans-serif;
+			font-size: clamp(2rem, 5vw, 3.5rem);
+			font-weight: 700;
+			color: #fff;
+			margin: 0 0 0.5rem;
+			position: relative;
+			letter-spacing: 0.1em;
+		}
+
+		.history-hero-sub {
+			font-family: 'Inter', sans-serif;
+			font-size: 1rem;
+			color: rgba(255, 255, 255, 0.4);
+			letter-spacing: 0.3em;
+			position: relative;
+		}
+
+		.history-hero-year {
+			margin-top: 2rem;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.85rem;
+			color: rgba(255, 255, 255, 0.5);
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.history-hero-year::before,
+		.history-hero-year::after {
+			content: '';
+			display: block;
+			width: 60px;
+			height: 1px;
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		/* タイムライン全体ラッパー */
+		.history-wrapper {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 4rem 1.5rem 6rem;
+		}
+
+		/* 年代グループ */
+		.decade-group {
+			margin-bottom: 1.5rem;
+		}
+
+		/* アコーディオントリガー（ボタン） */
+		.decade-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.72rem;
+			font-weight: 700;
+			letter-spacing: 0.35em;
+			color: #2c5364;
+			text-transform: uppercase;
+			padding: 0.65rem 1rem;
+			background: linear-gradient(90deg, rgba(44, 83, 100, 0.1), transparent);
+			border-left: 3px solid #2c5364;
+			border-radius: 0 6px 6px 0;
+			border-top: none;
+			border-right: none;
+			border-bottom: none;
+			cursor: pointer;
+			text-align: left;
+			margin-bottom: 0;
+			transition: background 0.2s, color 0.2s;
+			outline: none;
+		}
+
+		.decade-toggle:hover {
+			background: linear-gradient(90deg, rgba(44, 83, 100, 0.18), transparent);
+		}
+
+		.decade-toggle.open {
+			background: linear-gradient(90deg, rgba(44, 83, 100, 0.15), transparent);
+			margin-bottom: 1.2rem;
+		}
+
+		/* ▲▼ アイコン */
+		.decade-toggle-icon {
+			display: flex;
+			align-items: center;
+			gap: 0.6rem;
+			color: rgba(44, 83, 100, 0.5);
+			font-size: 0.65rem;
+		}
+
+		.decade-toggle-icon .count-badge {
+			background: rgba(44, 83, 100, 0.12);
+			color: #2c5364;
+			border-radius: 20px;
+			padding: 0.1em 0.7em;
+			font-size: 0.7rem;
+			letter-spacing: 0;
+			font-weight: 600;
+		}
+
+		.decade-arrow {
+			display: inline-block;
+			transition: transform 0.3s ease;
+			font-size: 0.8rem;
+			color: #2c5364;
+		}
+
+		.decade-toggle.open .decade-arrow {
+			transform: rotate(180deg);
+		}
+
+		/* アコーディオン本体（折りたたみ対象） */
+		.decade-body {
+			overflow: hidden;
+			transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			height: 0;
+		}
+
+		/* タイムライン本体 */
+		.timeline-v2 {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			position: relative;
+		}
+
+		/* 縦ライン */
+		.timeline-v2::before {
+			content: '';
+			position: absolute;
+			left: 130px;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background: linear-gradient(to bottom, #2c5364 0%, rgba(44, 83, 100, 0.1) 100%);
+		}
+
+		/* 各アイテム */
+		.timeline-v2 li {
+			display: flex;
+			align-items: flex-start;
+			gap: 0;
+			padding: 0.15rem 0;
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.5s ease, transform 0.5s ease;
+		}
+
+		.timeline-v2 li.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* 日付部分 */
+		.tl-date {
+			flex: 0 0 130px;
+			padding-top: 1.15rem;
+			padding-right: 1.5rem;
+			text-align: right;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.78rem;
+			font-weight: 600;
+			color: #2c5364;
+			letter-spacing: 0.03em;
+			line-height: 1.4;
+			white-space: nowrap;
+		}
+
+		/* ドット部分 */
+		.tl-dot-wrap {
+			flex: 0 0 0;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.tl-dot {
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background: #fff;
+			border: 2.5px solid #2c5364;
+			position: relative;
+			top: 1.15rem;
+			left: -6px;
+			z-index: 1;
+			transition: transform 0.3s, background 0.3s;
+			flex-shrink: 0;
+		}
+
+		.timeline-v2 li:hover .tl-dot {
+			background: #2c5364;
+			transform: scale(1.3);
+		}
+
+		/* コンテンツカード */
+		.tl-content {
+			flex: 1;
+			margin-left: 1.8rem;
+			background: #fff;
+			border-radius: 10px;
+			padding: 1rem 1.4rem;
+			margin-bottom: 0.8rem;
+			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+			border: 1px solid rgba(0, 0, 0, 0.04);
+			transition: box-shadow 0.3s, transform 0.3s;
+		}
+
+		.timeline-v2 li:hover .tl-content {
+			box-shadow: 0 8px 30px rgba(44, 83, 100, 0.12);
+			transform: translateX(4px);
+		}
+
+		/* コンテンツ内のh3 */
+		.tl-content h3 {
+			font-family: 'Noto Sans JP', sans-serif;
+			font-size: 0.92rem;
+			font-weight: 500;
+			color: #2d3748;
+			margin: 0;
+			padding: 0;
+			line-height: 1.7;
+		}
+
+		.tl-content h3+h3 {
+			margin-top: 0.5rem;
+			padding-top: 0.5rem;
+			border-top: 1px dashed #e2e8f0;
+		}
+
+		/* ハイライト項目（最新）*/
+		.timeline-v2 li.highlight .tl-content {
+			background: linear-gradient(135deg, #eef9ff 0%, #f0fff4 100%);
+			border-color: rgba(44, 130, 100, 0.15);
+		}
+
+		.timeline-v2 li.highlight .tl-dot {
+			background: #2c5364;
+			border-color: #2c5364;
+			width: 18px;
+			height: 18px;
+			left: -8px;
+		}
+
+		.timeline-v2 li.highlight .tl-date {
+			color: #1a3a46;
+			font-weight: 700;
+		}
+
+		/* ===== スマホ対応 ===== */
+		@media screen and (max-width: 600px) {
+			.history-hero {
+				padding: 4rem 1.5rem 3rem;
+			}
+
+			.timeline-v2::before {
+				left: 18px;
+			}
+
+			.timeline-v2 li {
+				flex-direction: column;
+				gap: 0;
+			}
+
+			.tl-date {
+				flex: none;
+				text-align: left;
+				padding: 0 0 0 2.8rem;
+				font-size: 0.75rem;
+				padding-top: 0;
+				margin-bottom: 0.3rem;
+			}
+
+			.tl-dot-wrap {
+				position: absolute;
+				left: 12px;
+				top: 0;
+			}
+
+			.tl-dot {
+				top: 0.25rem;
+				left: 0;
+			}
+
+			.tl-content {
+				margin-left: 2.5rem;
+			}
+
+			.timeline-v2 li {
+				position: relative;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+	</header>
+	<div id="container">
+		<div id="contents">
+			<main>
+
+				<!-- ヒーローバナー -->
+				<div class="history-hero">
+					<div class="history-hero-label">Our Story</div>
+					<h1>会社沿革</h1>
+					<div class="history-hero-sub">HISTORY</div>
+					<div class="history-hero-year">
+						<span>1977年創業</span>
+						<span>〜</span>
+						<span>現在</span>
+					</div>
+				</div>
+
+				<!-- タイムライン本体 -->
+				<div class="history-wrapper">
+
+					<!-- 2020年代 -->
+					<div class="decade-group" data-decade="2020s">
+						<div class="decade-label">2020s — 現代</div>
+						<ul class="timeline-v2">
+							<li class="highlight">
+								<div class="tl-date">2024年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>当社自社開発商品「スタンポン」一次開発完了</h3>
+									<h3>ウェブページ制作、Youtube、Instagram及びXなどのデジタル広報サービス事業を開始</h3>
+								</div>
+							</li>
+							<li class="highlight">
+								<div class="tl-date">2024年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>商標登録第9類「スタンポン」商標権取得</h3>
+									<h3>株式会社ネクスティエレクトロニクスと車載ソフトウェア開発業務に関して業務提携を締結</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2022年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>全省庁統一資格(入札:物品の製造、物品の販売、役務の提供)更新</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2021年<br>12月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>「DXケッサイプラスワン」がITツールに採択</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2021年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>IT導入支援事業者に採択</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2020年<br>8月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>新サービス「S.R.S.」(システムリノベーションサービス)の営業開始</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 2010年代 -->
+					<div class="decade-group">
+						<div class="decade-label">2010s</div>
+						<ul class="timeline-v2">
+							<li>
+								<div class="tl-date">2017年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>株式会社ネクスティエレクトロニクスと車載ソフト開発で業務提携</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2017年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>株式会社ネクスティエレクトロニクスと車載ソフト開発で業務提携</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2014年<br>11月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>SCSK株式会社、株式会社豆蔵、イーソル株式会社、ビジネスキューブ・アンド・パートナーズ株式会社、キャッツ株式会社と車載システム事業を共同で推進する目的で戦略的な業務提携で合意する(2014年11月28日プレスリリース)
+									</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2013年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>愛知県地域事務局より「平成24年度ものづくり中小企業・小規模事業者試作開発用等支援補助金」の交付決定を受ける(補助金の額:1千万円)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2013年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>代表取締役社長に若杉聡吾が就任、若杉直樹は代表取締役会長へ</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2012年<br>10月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>東京支店を品川区西五反田1-29-1 コイズミビル5階へ移転、増床(旧147.86㎡ → 新297.04㎡)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2012年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>当社オリジナル開発商品「RFLinkFamily」を当社ホームページ上にて販売開始</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2012年<br>2月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>エコネットコンソーシアムに加盟</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2011年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>FTL軽井沢(所在地:北佐久郡軽井沢町大字長倉字小谷ヶ沢2139番2966)を売却</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2010年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>World Wide Web Consortium(W3C)に加盟</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 2000年代 -->
+					<div class="decade-group">
+						<div class="decade-label">2000s</div>
+						<ul class="timeline-v2">
+							<li>
+								<div class="tl-date">2009年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>愛知県から「FNCS(ソフトウェア開発の効率化と作業平準化によるコストダウン)」で経営革新計画の承認を受ける</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2008年<br>11月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金を6700万円に増額(40,000株 増資)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2008年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>新栄ビル(所在地:名古屋市中区新栄2丁目8番23号)を売却</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2007年<br>5月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>関係会社の株式会社ファインテック及び株式会社システムコーディネイトを吸収合併し資本金が4700万円となる</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2007年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>有限責任法人JASPARへ正会員にて加盟</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2005年<br>12月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>FTL軽井沢(開発センター)を長野県北佐久郡軽井沢町大字長倉字小谷ヶ沢2139番2966に「FTL軽井沢」をオープン(土地5740坪、建物521.6坪)
+									</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2005年<br>5月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>入札の為の「全省庁統一資格」取得</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2004年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>長野県北佐久郡軽井沢町大字長倉字小谷ヶ沢2139番2966に「FTL軽井沢」建設用地及び建物を取得(土地5740坪、建物521.6坪)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2004年<br>5月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>無担保社債3億円発行&lt;当時:UFJ銀行(現:三菱UFJ銀行)100%保証&gt;</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2004年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>ジンバブエの政情不安により「FTL・AFRICA」を閉鎖</h3>
+									<h3>組織変更によりマーケティングDiv.を新設し営業部門の一本化をする</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2002年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>創立25周年記念社員旅行(台北3日)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2001年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>株式会社ファインテック及び株式会社システムコーディネイトの全株式を株式会社エフティエルインターナショナルへ譲渡</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">2000年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>携帯電話配信システム「夢プラン2000」開発</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 1990年代 -->
+					<div class="decade-group">
+						<div class="decade-label">1990s</div>
+						<ul class="timeline-v2">
+							<li>
+								<div class="tl-date">1999年<br>9月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市中区新栄三丁目3番2号に「FTL本社ビル」を竣工して本社を千種区から中区(本社ビル)に移転(鉄骨造5階建、延べ床面積260.1坪)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1999年<br>2月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>アフリカのジンバブエに関連会社「FTL・AFRICA」を設立</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1998年<br>11月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市中区新栄二丁目8番23号に「FTL新栄ビル」を竣工(鉄骨造5階建、延べ床面積156.4坪)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1998年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>社員旅行(香港3日)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1998年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>株式会社エフティエルインターナショナルを設立</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1997年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>商標登録第42類「FTL」商標権取得</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1997年<br>1月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>創立20周年記念社員旅行(ハワイ5日)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1994年<br>10月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>東京支店を東京都品川区西五反田一丁目17番6号トミエビル7階に移転(30坪)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1992年<br>1月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>創立15周年記念社員旅行(シンガポール5日)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1990年<br>12月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>"OEM EUROPE90"(於:フランス・パリ)に「アルミ蒸着カードターミナル」出展</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1990年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>ソニーコンピュータフェアに「AI=MASK」と「きづくり名人ジンゴローⅠ世」出展</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 1980年代 -->
+					<div class="decade-group">
+						<div class="decade-label">1980s</div>
+						<ul class="timeline-v2">
+							<li>
+								<div class="tl-date">1989年<br>10月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>あいち21産業情報フェア(於:名古屋吹上ホール)に「AI=MASK」と「アルミ蒸着カードターミナル」を出展</h3>
+									<h3>アルミ蒸着カードターミナル開発(日経産業新聞1面に掲載)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1988年<br>11月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>1988年第1回国際コンピュータ囲碁世界大会(於:台湾)に於いて日本代表の当社取締役林和芳が優勝</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1988年<br>8月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市中区新栄二丁目8番23号に不動産取得(土地126.27㎡)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1988年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>1988年国際コンピュータ囲碁大会(日本代表選抜大会)に於いて当社取締役林和芳が優勝し日本代表となる</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1988年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>東京都大田区蒲田一丁目の東京宿舎設置</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1987年<br>10月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>東京オフィスを東京営業所に格上げし港区芝一丁目に移転、開設</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1986年<br>12月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>株式会社システムコーディネイトを資本金1000万円に増資、株式会社ファインテックを資本金1000万円に増資</h3>
+									<h3>株式会社システムコーディネイトに出資、全株式取得(資本金500万円)、株式会社ファインテックの全株式取得(資本金500万円)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1986年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金を2700万円に増資</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1985年<br>9月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>(財)新世代コンピュータ技術開発機構(ICOT)の中期計画に参画</h3>
+									<h3>東京オフィス開設(東京都港区三田四丁目)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1984年<br>12月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>動画像編集装置開発(日経産業新聞1面に掲載)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1983年<br>10月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>オンライン集配信装置開発(日経産業新聞1面に掲載)</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1983年<br>3月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金を1500万円に増資</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1982年<br>8月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金500万円でハード開発の株式会社ファインテックを設立</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1982年<br>8月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金500万円でハード開発の株式会社ファインテックを設立</h3>
+									<h3>名古屋市千種区内山三丁目18番12号に開発部門を移転</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1982年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市千種区内山三丁目28番2号に本社を移転</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 創業期 -->
+					<div class="decade-group">
+						<div class="decade-label">Founding — 創業</div>
+						<ul class="timeline-v2">
+							<li>
+								<div class="tl-date">1980年<br>4月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>資本金を700万円に増資</h3>
+								</div>
+							</li>
+							<li>
+								<div class="tl-date">1979年<br>7月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市千種区(大福興行ビル)にてマイコン・ソフト開発の事業開始</h3>
+								</div>
+							</li>
+							<li class="highlight">
+								<div class="tl-date">1977年<br>6月</div>
+								<div class="tl-dot-wrap">
+									<div class="tl-dot"></div>
+								</div>
+								<div class="tl-content">
+									<h3>名古屋市守山区で資本金300万円で会社設立　代表取締役に若杉直樹、取締役に林和芳就任</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div><!-- /.history-wrapper -->
+
+			</main>
+		</div>
+		<!--/#contents-->
+		<footer>
+			<small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+		</footer>
+	</div>
+	<!--/#container-->
+	<!--開閉メニュー-->
+	<div id="menubar">
+
+		<nav>
+			<ul>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="company.html">会社案内</a></li>
+				<li><a href="business.html">事業紹介</a></li>
+				<li><a href="products.html">製品・サービス</a>
+					<ul>
+						<li><a href="products.html#kouhou">デジタル広報支援サービス</a></li>
+						<li><a href="products.html#srs">システムリノベーションサービス</a></li>
+						<li><a href="products.html#syounin">電子承認システム</a></li>
+						<li><a href="products.html#keihi">DXケッサイプラスワン</a></li>
+						<li><a href="products.html#gyoumu">業務管理システム</a></li>
+						<li><a href="products.html#genzai">製品原材料管理システム</a></li>
+					</ul>
+				</li>
+				<li><a href="recruit.html">採用情報</a></li>
+				<li><a href="form.html">お問合せ</a></li>
+			</ul>
+		</nav>
+
+	</div>
+	<!--/#menubar（開閉メニュー）-->
+	<!--ページの上部へ戻るボタン-->
+	<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+	<!--開閉ボタン（ハンバーガーアイコン）-->
+	<div id="menubar_hdr">
+		<span></span><span></span><span></span>
+	</div>
+	<!--jQueryの読み込み-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!--パララックス（inview）-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+	<!--このテンプレート専用のスクリプト-->
+	<script src="js/main.js"></script>
+
+	<!-- アコーディオン + スクロールアニメーション -->
+	<script>
+		(function () {
+			/* ---- アコーディオン ---- */
+			const groups = document.querySelectorAll('.decade-group');
+
+			groups.forEach((group, idx) => {
+				// labelをbuttonに置き換え
+				const label = group.querySelector('.decade-label');
+				const tl = group.querySelector('.timeline-v2');
+				const count = tl ? tl.querySelectorAll('li').length : 0;
+
+				// ボタン生成
+				const btn = document.createElement('button');
+				btn.className = 'decade-toggle';
+				btn.setAttribute('aria-expanded', idx === 0 ? 'true' : 'false');
+				btn.innerHTML =
+					'<span>' + label.textContent + '</span>' +
+					'<span class="decade-toggle-icon">' +
+					'<span class="count-badge">' + count + '件</span>' +
+					'<span class="decade-arrow">&#9660;</span>' +
+					'</span>';
+				label.replaceWith(btn);
+
+				// bodyラッパーで包む
+				const body = document.createElement('div');
+				body.className = 'decade-body';
+				if (tl) {
+					tl.parentNode.insertBefore(body, tl);
+					body.appendChild(tl);
+				}
+
+				// 初期状態：最初のグループだけ開く
+				if (idx === 0) {
+					btn.classList.add('open');
+					body.style.height = body.scrollHeight + 'px';
+					// 最初のグループのliは即座にvisibleに
+					body.querySelectorAll('li').forEach((li, i) => {
+						setTimeout(() => li.classList.add('visible'), 80 * i);
+					});
+				} else {
+					body.style.height = '0';
+				}
+
+				// クリックで開閉
+				btn.addEventListener('click', () => {
+					const isOpen = btn.classList.contains('open');
+					if (isOpen) {
+						// 閉じる
+						body.style.height = body.scrollHeight + 'px';
+						requestAnimationFrame(() => {
+							body.style.height = body.scrollHeight + 'px';
+							requestAnimationFrame(() => {
+								body.style.height = '0';
+							});
+						});
+						btn.classList.remove('open');
+						btn.setAttribute('aria-expanded', 'false');
+					} else {
+						// 開く
+						body.style.height = body.scrollHeight + 'px';
+						body.addEventListener('transitionend', () => {
+							body.style.height = 'auto';
+						}, { once: true });
+						btn.classList.add('open');
+						btn.setAttribute('aria-expanded', 'true');
+
+						// まだvisibleになってないliをアニメーション
+						const newItems = body.querySelectorAll('li:not(.visible)');
+						newItems.forEach((li, i) => {
+							setTimeout(() => li.classList.add('visible'), 80 * i);
+						});
+					}
+				});
+			});
+
+			/* ---- スクロールアニメーション（展開済みのグループ用）---- */
+			const scrollObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+						// 開いているグループのみ対象
+						const body = entry.target.closest('.decade-body');
+						if (body && body.style.height !== '0px' && body.style.height !== '0') {
+							entry.target.classList.add('visible');
+						}
+					}
+				});
+			}, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+
+			document.querySelectorAll('.timeline-v2 li').forEach(li => scrollObserver.observe(li));
+		})();
+	</script>
+</body>
+
+</html>

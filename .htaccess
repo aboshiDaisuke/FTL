@@ -1,0 +1,4 @@
+<FilesMatch "(\.htaccess|\.ini|\.txt|\.log|\.csv)$">
+    deny from all
+</FilesMatch>
+Options -Indexes

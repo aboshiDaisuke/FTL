@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>株式会社 未来技術研究所 | 学生エントリーシート</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="学生向けエントリーフォーム" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header></header>
+
+    <div id="container">
+        <div id="contents">
+            <main>
+                <section>
+                    <div class="titleset3-bg-parts">
+                        <h3>学生エントリーシート</h3>
+                    </div>
+
+                    <section>
+                        <form action="entry_send.php" method="POST">
+                            <table class="ta1-parts">
+                                <tr>
+                                    <th>氏名（必須）</th>
+                                    <td><input type="text" name="name" required></td>
+                                </tr>
+                                <tr>
+                                    <th>ふりがな</th>
+                                    <td><input type="text" name="furigana"></td>
+                                </tr>
+                                <tr>
+                                    <th>学校名（必須）</th>
+                                    <td><input type="text" name="school" required></td>
+                                </tr>
+                                <tr>
+                                    <th>学部</th>
+                                    <td><input type="text" name="faculty"></td>
+                                </tr>
+                                <tr>
+                                    <th>学科</th>
+                                    <td><input type="text" name="department"></td>
+                                </tr>
+                                <tr>
+                                    <th>学年（必須）</th>
+                                    <td>
+                                        <select name="grade" required>
+                                            <option value="">選択してください</option>
+                                            <option value="1年">1年</option>
+                                            <option value="2年">2年</option>
+                                            <option value="3年">3年</option>
+                                            <option value="4年">4年</option>
+                                            <option value="大学院">大学院</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th>
+                                    <td><input type="tel" name="phone"></td>
+                                </tr>
+                                <tr>
+                                    <th>メールアドレス（必須）</th>
+                                    <td><input type="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <th>メールアドレス（確認用）</th>
+                                    <td><input type="email" name="email_confirm" required></td>
+                                </tr>
+                                <tr>
+                                    <th>希望の職種（必須）</th>
+                                    <td>
+                                        <label><input type="checkbox" name="desired_position[]" value="技術者" required>
+                                            技術者</label><br />
+                                        <label><input type="checkbox" name="desired_position[]" value="営業"> 営業</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>志望動機（必須）</th>
+                                    <td><textarea name="motivation" rows="6" required></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th>自己PR</th>
+                                    <td><textarea name="self_pr" rows="6"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th>備考</th>
+                                    <td><textarea name="remarks" rows="4"></textarea></td>
+                                </tr>
+                            </table>
+
+                            <p style="text-align:center; margin: 1.5em 0;">
+                                <button type="submit">送信する</button>
+                            </p>
+                        </form>
+                    </section>
+                </section>
+            </main>
+        </div>
+
+        <ul id="footermenu1-parts">
+            <li><a href="policy.html">プライバシー・サイトポリシー</a></li>
+            <li><a href="ism.html">情報セキュリティ基本方針</a></li>
+        </ul>
+
+        <footer>
+            <small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+        </footer>
+    </div>
+
+    <div id="menubar">
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="company.html">会社案内</a></li>
+                <li><a href="business.html">事業紹介</a></li>
+                <li><a href="products.html">製品・サービス</a></li>
+                <li><a href="recruit.html">採用情報</a></li>
+                <li><a href="entrysheet.html">学生エントリー</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+    <div id="menubar_hdr"><span></span><span></span><span></span></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

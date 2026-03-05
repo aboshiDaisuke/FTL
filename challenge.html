@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>株式会社 未来技術研究所 | チャレンジテクノロジー</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="未来技術研究所の新たな挑戦「チャレンジテクノロジー」。限界なき挑戦が、新しい価値を生み出します。" name="description" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===== チャレンジテクノロジー専用 サイバーデザイン ===== */
+
+        /* 全体背景の強制上書き（ダーク・サイバーテーマ） */
+        body,
+        #container,
+        #contents,
+        main {
+            background-color: #020611 !important;
+            color: #d1e8ff !important;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        /* ヒーローセクション */
+        .challenge-hero {
+            position: relative;
+            background: radial-gradient(circle at center, #0a1930 0%, #020611 100%);
+            padding: 7rem 2rem 5rem;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            border-bottom: 2px solid #00f3ff;
+            box-shadow: 0 5px 30px rgba(0, 243, 255, 0.15);
+        }
+
+        /* 3Dテックグリッド（動く背景） */
+        .challenge-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(0, 243, 255, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.2) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(600px) rotateX(60deg) scale(2);
+            transform-origin: bottom center;
+            opacity: 0.6;
+            z-index: 1;
+            animation: gridMove 10s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 50px;
+            }
+        }
+
+        .challenge-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .challenge-hero-en {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.6em;
+            color: #00f3ff;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .challenge-hero h1 {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0 0 1.5rem;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .challenge-hero-sub {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #8bb4cc;
+            display: inline-block;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 243, 255, 0.3);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+        }
+
+        /* コンテンツエリア */
+        .challenge-intro {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .challenge-intro::before {
+            content: '[ INIT_SEQUENCE_STARTED ]';
+            display: block;
+            font-family: 'Courier New', monospace;
+            color: #00f3ff;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+        }
+
+        .challenge-intro p {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #a4c8e1;
+        }
+
+        /* 動画カードグリッド */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .video-card {
+            background: rgba(10, 20, 35, 0.8);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .video-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f3ff, transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 243, 255, 0.2), 0 0 15px inset rgba(0, 243, 255, 0.05);
+            border-color: rgba(0, 243, 255, 0.6);
+        }
+
+        .video-card:hover::before {
+            opacity: 1;
+        }
+
+        /* エピソード番号のバッジ */
+        .ep-badge {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            background: #00f3ff;
+            color: #020611;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 0.4rem 1.2rem;
+            z-index: 10;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+            transform: skewX(-15deg);
+        }
+
+        .ep-badge span {
+            display: block;
+            transform: skewX(15deg);
+        }
+
+        .ep-badge.soon {
+            background: #2a3f54;
+            color: #7a9cb8;
+            box-shadow: none;
+            border: 1px solid #4a6882;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 準備中プレースホルダー */
+        .coming-soon-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: repeating-linear-gradient(45deg, #050a14, #050a14 10px, #0a1428 10px, #0a1428 20px);
+            color: #4a6882;
+        }
+
+        .coming-soon-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: rgba(0, 243, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+                text-shadow: none;
+            }
+
+            50% {
+                opacity: 0.8;
+                text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+            }
+
+            100% {
+                opacity: 0.3;
+                text-shadow: none;
+            }
+        }
+
+        .coming-soon-placeholder span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+        }
+
+        .video-info {
+            padding: 2rem 1.5rem;
+        }
+
+        .video-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 1rem 0;
+            line-height: 1.4;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        .video-desc {
+            font-size: 0.95rem;
+            color: #8bb4cc;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* 戻るボタンのサイバーアレンジ */
+        .btn-cyber {
+            display: inline-block;
+            background: transparent;
+            color: #00f3ff;
+            border: 1px solid #00f3ff;
+            padding: 1rem 2.5rem;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px inset rgba(0, 243, 255, 0.1);
+        }
+
+        .btn-cyber:hover {
+            background: rgba(0, 243, 255, 0.15);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4), 0 0 20px inset rgba(0, 243, 255, 0.4);
+            color: #fff;
+        }
+
+        /* スクロールアニメーション用 */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media screen and (max-width: 768px) {
+            .challenge-hero {
+                padding: 5rem 1rem 3rem;
+            }
+
+            .challenge-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .challenge-hero-en {
+                font-size: 0.9rem;
+            }
+
+            .challenge-hero-sub {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="contents">
+            <main>
+
+                <!-- ===== HERO ===== -->
+                <section class="challenge-hero">
+                    <div class="challenge-hero-content">
+                        <span class="challenge-hero-en">Challenge Technology</span>
+                        <h1>チャレンジテクノロジー</h1>
+                        <p class="challenge-hero-sub">
+                            限界なき挑戦が、新しい価値を生み出す。<br>
+                            未来技術研究所の技術への探求をご紹介します。
+                        </p>
+                    </div>
+                </section>
+
+                <!-- ===== INTRODUCTION ===== -->
+                <section class="challenge-intro fade-in-up">
+                    <p>
+                        私たちは既存の枠組みにとらわれず、<br>
+                        最新のテクノロジーを用いて様々な「挑戦」を行っています。<br>
+                        エンジニアの発想から生まれるプロトタイプや検証動画をお届けします。
+                    </p>
+                </section>
+
+                <!-- ===== VIDEO GRID ===== -->
+                <section>
+                    <div class="video-grid">
+
+                        <!-- 第一弾 動画 -->
+                        <div class="video-card fade-in-up">
+                            <div class="ep-badge">#01</div>
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/YVMlhOF5lAo?si=8dNobVOFx9khn_Z9"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title">第一弾「夢ブロック」</h3>
+                                <p class="video-desc">
+                                    ブロックを組み立てるようにシステムを構築する新しい概念の検証。未来技術研究所のエンジニアが独自のアイデアを形にしたプロトタイプのデモンストレーション映像です。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 第二弾 以降 (Coming Soon) -->
+                        <div class="video-card fade-in-up" style="transition-delay: 0.1s;">
+                            <div class="ep-badge soon">#02</div>
+                            <div class="video-wrapper">
+                                <div class="coming-soon-placeholder">
+                                    <i class="fa-solid fa-flask"></i>
+                                    <span>COMING SOON</span>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3 class="video-title" style="color: #a0aec0;">第二弾 準備中...</h3>
+                                <p class="video-desc">
+                                    現在、新たなチャレンジテクノロジーの検証を進めています。次回の公開をお楽しみに。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+                    <a href="index.html" class="btn-cyber">トップページへ戻る <i class="fas fa-arrow-circle-left"></i></a>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- フッター周り（共通パーツ） -->
+        <ul id="footermenu1-parts">
+            <li><a href="policy.html">プライバシー・サイトポリシー</a></li>
+            <li><a href="ism.html">情報セキュリティ基本方針</a></li>
+        </ul>
+        <footer>
+            <small>Copyright© 株式会社 未来技術研究所 All Rights Reserved.</small>
+        </footer>
+
+    </div>
+    <!--/#container-->
+
+    <!--開閉メニュー-->
+    <div id="menubar">
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="company.html">会社案内</a></li>
+                <li><a href="business.html">事業紹介</a></li>
+                <li><a href="products.html">製品・サービス</a>
+                    <ul>
+                        <li><a href="products.html#kouhou">デジタル広報支援サービス</a></li>
+                        <li><a href="products.html#srs">システムリノベーションサービス</a></li>
+                        <li><a href="products.html#syounin">電子承認システム</a></li>
+                        <li><a href="products.html#keihi">DXケッサイプラスワン</a></li>
+                        <li><a href="products.html#gyoumu">業務管理システム</a></li>
+                    </ul>
+                </li>
+                <li><a href="recruit.html">採用情報</a></li>
+                <li><a href="form.html">お問合せ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--ページの上部へ戻るボタン-->
+    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+    <!--開閉ボタン（ハンバーガーアイコン）-->
+    <div id="menubar_hdr">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- スクリプト -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- スクロールアニメーション -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
