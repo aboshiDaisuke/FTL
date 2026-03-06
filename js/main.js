@@ -462,30 +462,46 @@ $(function() {
 //===============================================================
 $(function() {
   const sliders = document.querySelectorAll('.list-yoko-scroll-parts');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
 
   sliders.forEach(slider => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
     slider.addEventListener('mousedown', (e) => {
       isDown = true;
       slider.style.cursor = 'grabbing';
+      // ドラッグ中はスナップを解除（スムーズに動かすため）
+      slider.style.scrollSnapType = 'none';
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
+
+      // iframeがドラッグを邪魔しないように一時的にクリック不可にする
+      const iframes = slider.querySelectorAll('iframe');
+      iframes.forEach(iframe => iframe.style.pointerEvents = 'none');
     });
+
     slider.addEventListener('mouseleave', () => {
       isDown = false;
-      slider.style.cursor = 'grap';
+      slider.style.cursor = 'grab';
+      slider.style.scrollSnapType = 'x mandatory';
+      const iframes = slider.querySelectorAll('iframe');
+      iframes.forEach(iframe => iframe.style.pointerEvents = 'auto');
     });
+
     slider.addEventListener('mouseup', () => {
       isDown = false;
-      slider.style.cursor = 'grap';
+      slider.style.cursor = 'grab';
+      slider.style.scrollSnapType = 'x mandatory';
+      const iframes = slider.querySelectorAll('iframe');
+      iframes.forEach(iframe => iframe.style.pointerEvents = 'auto');
     });
+
     slider.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // スクロールの速さ（2倍に設定）
+      const walk = (x - startX) * 1.5; // スクロール速度
       slider.scrollLeft = scrollLeft - walk;
     });
   });
