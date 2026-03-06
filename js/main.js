@@ -456,3 +456,37 @@ $(function() {
       });
   });
 });
+
+//===============================================================
+// 横スクロール領域（list-yoko-scroll-parts）でのマウスドラッグ操作
+//===============================================================
+$(function() {
+  const sliders = document.querySelectorAll('.list-yoko-scroll-parts');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  sliders.forEach(slider => {
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.style.cursor = 'grabbing';
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.style.cursor = 'grap';
+    });
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.style.cursor = 'grap';
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // スクロールの速さ（2倍に設定）
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
+});
