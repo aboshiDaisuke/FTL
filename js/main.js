@@ -471,30 +471,25 @@ $(function() {
     slider.addEventListener('mousedown', (e) => {
       isDown = true;
       slider.style.cursor = 'grabbing';
-      // ドラッグ中はスナップを解除（スムーズに動かすため）
+      // テキスト選択とスナップを解除
       slider.style.scrollSnapType = 'none';
+      document.body.style.userSelect = 'none'; 
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
-
-      // iframeがドラッグを邪魔しないように一時的にクリック不可にする
-      const iframes = slider.querySelectorAll('iframe');
-      iframes.forEach(iframe => iframe.style.pointerEvents = 'none');
     });
 
     slider.addEventListener('mouseleave', () => {
       isDown = false;
       slider.style.cursor = 'grab';
       slider.style.scrollSnapType = 'x mandatory';
-      const iframes = slider.querySelectorAll('iframe');
-      iframes.forEach(iframe => iframe.style.pointerEvents = 'auto');
+      document.body.style.userSelect = ''; 
     });
 
     slider.addEventListener('mouseup', () => {
       isDown = false;
       slider.style.cursor = 'grab';
       slider.style.scrollSnapType = 'x mandatory';
-      const iframes = slider.querySelectorAll('iframe');
-      iframes.forEach(iframe => iframe.style.pointerEvents = 'auto');
+      document.body.style.userSelect = ''; 
     });
 
     slider.addEventListener('mousemove', (e) => {
