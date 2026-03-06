@@ -3013,10 +3013,10 @@ a:hover.btn1-parts {
 /* スマホ表示での「会社を知る」文字サイズ調整 */
 @media screen and (max-width: 599px) {
   .parts-list-normal2 h3 .large-parts {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
   .company-title {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
